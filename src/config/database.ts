@@ -10,6 +10,7 @@ export function connectDb(): void {
 
 export async function connectCache(): Promise<void> {
   await cache.connect();
+  await cache.flushAll();
 }
 
 export async function disconnectDB(): Promise<void> {
